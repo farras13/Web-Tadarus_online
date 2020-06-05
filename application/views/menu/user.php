@@ -41,7 +41,7 @@
                             </td>
                             <td>
                                 <a href="" class="badge badge-success" data-toggle="modal" data-target="#newSubMenuModal<?= $sm['id']; ?>">edit</a>
-                                <a href="" class="badge badge-danger">delete</a>
+                                <a href="<?= base_url('menu/deletuser/').$sm['id']; ?>" class="badge badge-danger">delete</a>
                             </td>
                         </tr>
                         <?php $i++; ?>

@@ -39,7 +39,6 @@ class User extends CI_Controller
     {
         $data['title'] = 'Validasi Darus';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $this->load->model('Menu_model', 'menu');
         $wher = array('jadwal.id_user'=>$this->session->userdata('id'));
         $data['subMenu'] = $this->m->getJoinW('jadwal', 'user', 'user.id = jadwal.id_user', $wher)->result_array();
         $data['menu'] = $this->db->get('user')->result_array();
